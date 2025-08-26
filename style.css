@@ -276,12 +276,14 @@ textarea {
 /* Searchbar */
 .searchbar {
   display: none;
+  width: 90%;
   align-items: center;
-  position: sticky;
-  top: 0;
+  position: absolute;
+  left: 0%;
   padding: 8px;
-  background: var(--bg-color);
   z-index: 5;
+  transition: 1;
+  animation: slideUp 0.5s ease-in-out;
 }
 
 .searchbar input {
