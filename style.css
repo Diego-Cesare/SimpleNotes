@@ -290,3 +290,77 @@ h3 {
     transform: translateY(-2px);
     box-shadow: 0px 10px 10px 1px var(--popup-shadow);
 }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #181818;
+        --text-color: #e5e5e5;
+        --primary-color: #e16447;
+        --secondary-color: #eea290;
+        --header-bg: #222;
+        --popup-bg: #2a2a2a;
+        --popup-shadow: rgba(0, 0, 0, 0.6);
+        --input-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .card {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    }
+
+    .card p {
+        color: #c5c5c5;
+    }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .notes__title span {
+        font-size: 26px;
+    }
+
+    .card {
+        height: auto;
+        padding: 16px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+    .notes__title {
+        height: auto;
+        padding: 10px;
+    }
+
+    .notes__title span {
+        font-size: 22px;
+    }
+
+    .notes__title i {
+        font-size: 24px;
+    }
+
+    .notesPopUp #openModal {
+        bottom: 5%;
+        height: 50px;
+        width: 50px;
+        font-size: 24px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* cards ocupam largura inteira */
+        gap: 15px;
+    }
+
+    .card {
+        margin: 10px;
+        height: auto;
+    }
+
+    .searchbar {
+        width: 95%;
+    }
+}
