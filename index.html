@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>SimpleNotes</title>
+</head>
+
+<body>
+    <div class="notesPopUp">
+        <button id="openModal"><i class="ph-bold ph-plus"></i></button>
+        <div class="notes__title">
+            <div class="title">
+                <span>SimpleNotes</span>
+                <i id="openSearchBar" class="ph-bold ph-magnifying-glass"></i>
+            </div>
+            <div id="searchBar" class="searchbar">
+                <input id="q" type="text" placeholder="Search note" />
+            </div>
+        </div>
+        <div class="overlay" id="overlay">
+            <div class="modal__title">
+                <h2 id="modalTitle">Adicionar / Editar Nota</h2>
+                <div class="timestamp" id="liveStamp"></div>
+            </div>
+            <div class="content">
+                <div>
+                    <label for="title">Título</label>
+                    <input id="title" type="text" maxlength="120" placeholder="Ex.: Ideia para o projeto" />
+                </div>
+                <div>
+                    <label for="text">Nota</label>
+                    <textarea id="text" placeholder="Escreva aqui…"></textarea>
+                </div>
+            </div>
+            <div class="actions__buttons">
+                <button id="cancel">Cancelar</button>
+                <button id="save">Salvar</button>
+            </div>
+        </div>
+        <div class="actions">
+            <!-- Modal -->
+        </div>
+        <section id="notes" class="grid" aria-live="polite"></section>
+        <div id="empty" class="empty" style="display:none">Nenhuma nota ainda. Clique em <strong>+ Nova
+                Nota</strong> para começar.</div>
+    </div>
+    <template id="cardTmpl">
+        <article class="card" data-id="">
+            <div class="row">
+                <h3 class="ttl"></h3>
+            </div>
+            <div class="stamp"></div>
+            <p class="txt"></p>
+            <div class="btns">
+                <button class="icon-btn" data-act="edit" title="Editar">
+                    Edit
+                </button>
+                <button class="icon-btn danger" data-act="del" title="Excluir">
+                    Delete
+                </button>
+            </div>
+        </article>
+    </template>
+    <script src="script.js"></script>
+</body>
+
+</html>
