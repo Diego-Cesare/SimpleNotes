@@ -271,7 +271,7 @@ textarea {
 
 /* Searchbar */
 .searchbar {
-  display: flex;
+  display: none;
   align-items: center;
   position: sticky;
   top: 0;
