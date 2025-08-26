@@ -31,6 +31,10 @@
   }
 }
 
+.searchbar.active{
+    display: flex;
+}
+
 /* Reset */
 * {
   margin: 0;
@@ -286,7 +290,6 @@ textarea {
   border: 1px solid #708090;
   border-radius: 8px;
   font-size: 14px;
-  background: var(--input-color);
 }
 
 /* Estado vazio */
