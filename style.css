@@ -56,10 +56,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px;
-  background: var(--primary-color);
+  padding: 24px;
   position: sticky;
   top: 0;
+  backdrop-filter: blur(10px);
   z-index: 10;
 }
 
@@ -73,12 +73,12 @@ body {
 .notes__title span {
   font-size: 22px;
   font-weight: 700;
-  color: var(--bg-color);
+  color: var(--text-color);
 }
 
 .notes__title i {
   font-size: 24px;
-  color: var(--bg-color);
+  color: var(--text-color);
   cursor: pointer;
 }
 
@@ -88,15 +88,16 @@ body {
   bottom: 16px;
   right: 16px;
   height: 56px;
-  width: 56px;
-  border-radius: 50%;
+  width: 130px;
+  border-radius: 10px;
+  padding: 0px 10px;
   border: none;
   background: var(--primary-color);
   color: var(--bg-color);
-  font-size: 24px;
+  font-size: 16px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   box-shadow: 0 4px 8px var(--popup-shadow);
   cursor: pointer;
   z-index: 20;
@@ -134,6 +135,10 @@ body {
   font-size: 14px;
   line-height: 1.4;
   color: #708090;
+}
+
+.card p.txt {
+  white-space: pre-wrap;
 }
 
 .stamp {
