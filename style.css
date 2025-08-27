@@ -299,6 +299,7 @@ textarea {
 /* Searchbar */
 .searchbar {
   display: none;
+  width: 50%;
   align-items: center;
   position: absolute;
   left: 0%;
