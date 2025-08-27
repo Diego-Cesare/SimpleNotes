@@ -131,6 +131,24 @@ body {
   border-radius: 6px;
 }
 
+.icon-btn.mark-btn {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--red);
+  font-size: 22px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.icon-btn.mark-btn.done {
+  color: var(--green);
+}
+
 .card p {
   font-size: 14px;
   line-height: 1.4;

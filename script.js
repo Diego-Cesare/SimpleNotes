@@ -39,6 +39,7 @@ const fileInput = $('#file');
 
 // ======= Render =======
 function render(list = null) {
+
     if (list === null) {
         notes = loadNotes();
         list = notes;
@@ -59,6 +60,12 @@ function render(list = null) {
         $('.ttl', node).textContent = n.title || '(Sem título)';
         $('.stamp', node).textContent = `${shortFmt(n.createdAt)}${n.updatedAt ? ` • atualizado ${shortFmt(n.updatedAt)}` : ''}`;
         $('.txt', node).textContent = n.text || '';
+
+        // Botão de marcar
+        const markBtn = $('.mark-btn', node);
+        if (n.done) markBtn.classList.add('done');
+        else markBtn.classList.remove('done');
+
         wrap.appendChild(node);
     });
 }
@@ -121,6 +128,12 @@ wrap.addEventListener('click', (e) => {
     if (act === 'edit') {
         openModal(true, note);
     }
+    if (act === 'mark') {
+        notes = notes.map(n => n.id === id ? { ...n, done: !n.done } : n);
+        saveNotes(notes);
+        render();
+    }
+
 });
 
 openSearchBar.addEventListener('click', (e) => {
